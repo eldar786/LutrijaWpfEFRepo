@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="LutrijaWpfEF.UI.PregledView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view_Model="clr-namespace:LutrijaWpfEF.ViewModel;assembly=LutrijaWpfEF.ViewModel"
+             xmlns:local="clr-namespace:LutrijaWpfEF.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    
+
+    <DockPanel LastChildFill="True">
+
+       
+
+        <Grid DockPanel.Dock ="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="12"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" >
+                <Button Content="EOP_ANA" Width="190" Height="50" Click="Button_Click_EOP_ANA" Margin="5"/>
+                <Button Content="GR__ORGANIZACIJE__VIEW" Width="190" Height="50" Click="Button_Click_GR_ORG_VIEW" Margin="5"/>
+                <Button Content="KOMITENTI_IME_MATBR_ZRACUN" Width="190" Height="50" Click="Button_Click_KOMITENTI_IME_MATBR_ZRACUN_VIEW" Margin="5"/>
+            </StackPanel>
+            <ContentControl x:Name="prikaziContent" Grid.Row="1" Grid.Column="3" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+            <!--<ListView Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="4"  ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto" FontSize="16" FontWeight="Normal" x:Name="lstKiosci" ItemsSource="{Binding Path=Kiosci}" MouseDoubleClick="lstKiosci_MouseDoubleClick">
+                <ListView.View >
+                    <GridView>
+                        <GridViewColumn Header="ID" Width="80" DisplayMemberBinding="{Binding Path=KioskID}"/>
+                        --><!--<GridViewColumn Header="Org.jedinica" Width="100" DisplayMemberBinding="{Binding Path=Organizacija}"/>--><!--
+                        <GridViewColumn Header="GLN" Width="130" DisplayMemberBinding="{Binding Path=GLN}"/>
+                        <GridViewColumn Header="Grad" Width="150" DisplayMemberBinding="{Binding Path=Grad}"/>
+                        <GridViewColumn Header="Oznaka" Width="70" DisplayMemberBinding="{Binding Path=Oznaka}"/>
+                        <GridViewColumn Header="Adresa" Width="250" DisplayMemberBinding="{Binding Path=Adresa}"/>
+                        <GridViewColumn Header="Regija" Width="150" DisplayMemberBinding="{Binding Path=Regija}"/>
+                        <GridViewColumn Header="ID PM" Width="90" DisplayMemberBinding="{Binding Path=PM}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>-->
+        </Grid>
+    </DockPanel>
+</UserControl>

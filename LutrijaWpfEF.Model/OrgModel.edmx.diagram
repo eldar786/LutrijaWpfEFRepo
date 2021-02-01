@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1a4c4376110049e9ac28502be20dae8d" Name="Diagram1">
+        <EntityTypeShape EntityType="LutrijaModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.BAZNE_IGRE" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.ENTITETI" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.EOP_ANA" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.EOP_SIN" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.EopAnas" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.ESRECKE_IGRE" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.IGRE" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.IMP_EOP_ANA" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.IMP_ISPLATA" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.ISPLATA" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.ISPLATA_SINTETIKA" Width="1.5" PointX="4.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.KANTONI" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.KLADIONICA" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.KLADIONICA_IGRE" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.OPCINE" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.POLOG_PAZAR" Width="1.5" PointX="11.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.REGIONI" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.SRECKE" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.sysdiagrams" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.UPLATA" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.GR_ORGANIZACIJE_VIEW" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LutrijaModel.komitenti_ime_matbr_zracun" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="LutrijaModel.FK_EOP_SIN_OPCINE" ManuallyRouted="false" />
+        <AssociationConnector Association="LutrijaModel.FK_UPLATA_IGRE" ManuallyRouted="false" />
+        <AssociationConnector Association="LutrijaModel.FK_KLADIONICA_KLADIONICA_IGRE" ManuallyRouted="false" />
+        <AssociationConnector Association="LutrijaModel.FK_UPLATA_UPLATA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

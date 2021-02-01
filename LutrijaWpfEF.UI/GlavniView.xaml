@@ -1,0 +1,171 @@
+﻿<UserControl x:Class="LutrijaWpfEF.UI.GlavniView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LutrijaWpfEF.UI"
+             xmlns:vm="clr-namespace:LutrijaWpfEF.ViewModel;assembly=LutrijaWpfEF.ViewModel" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1100" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <UserControl.Resources>
+        
+        <DataTemplate DataType="{x:Type vm:GlavniViewModel}">
+            <local:GlavniView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:OdaberiOpBrojViewModel}">
+            <local:OdaberiOpBrojView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:OdaberiMjestoViewModel}">
+            <local:OdaberiMjestoView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:OrgViewModel}">
+            <local:OrgView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:OdaberiKomitentaViewModel}">
+            <local:KomitentiView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:ImportViewModel}">
+            <local:ImportView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:EopAnaViewModel}">
+            <local:EopAnaViewUC/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:GrOrgViewModel}">
+            <local:GrOrganizacijeUC/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:GrKomViewModel}">
+            <local:GrKomitentiUC/>
+        </DataTemplate>
+
+    </UserControl.Resources>
+    <DockPanel LastChildFill="True">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Background="{DynamicResource WinBackground}" Visibility="{Binding }" BorderThickness="1,1,1,1" CornerRadius="0,0,0,0" Grid.RowSpan="1" Grid.ColumnSpan="2">
+            </Border>
+            <Border Background="AliceBlue" BorderBrush="Silver" BorderThickness="1,0,1,1" Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Content="{Binding Path=OdabranaOpcija, FallbackValue='odabrana_opcija'}" HorizontalAlignment="Stretch" Grid.ColumnSpan="3" HorizontalContentAlignment="Center"  VerticalAlignment="Center" Foreground="Black" FontSize="14" FontWeight="Bold" Height="35"/>
+            <Expander Header="Meni" Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" FontSize="16" IsExpanded="True" BorderBrush="{x:Null}" Background="White">
+                <StackPanel Orientation="Vertical">
+                    <Button x:Name="btnImport"  Background="{x:Null}" Width="Auto" Height="30" HorizontalAlignment="Left" BorderBrush="{x:Null}" Command="{Binding ImportCommand}" Margin="20,0,0,0" Visibility="{Binding Path=PrikaziKioske}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="7*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="/Ikone/shop.png" Stretch="Uniform" Grid.ColumnSpan="2" Margin="0,0,15,0" Grid.RowSpan="2"/>
+                            <Label Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14" Margin="6,-2,-6,0" Content="Import" Grid.RowSpan="2"/>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="btnOrg"  Background="{x:Null}" Width="Auto" Height="30" HorizontalAlignment="Left" BorderBrush="{x:Null}" Command="{Binding OrgCommand}" Margin="20,0,0,0" Visibility="{Binding Path=PrikaziParametri}">
+                        <Grid>
+                            <Grid.RowDefinitions></Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="/Ikone/parametri.png" Stretch="Uniform"/>
+                            <Label Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14" Margin="0,-2,0,0" Content="ORG"/>
+                        </Grid>
+                    </Button>
+                </StackPanel>
+            </Expander>
+            <Expander Header="Prikaz" Grid.Column="0" Grid.Row="4" Grid.RowSpan="4" FontSize="16" IsExpanded="False" BorderBrush="{x:Null}" Background="White">
+                <StackPanel Orientation="Vertical">
+                    <Button x:Name="btnEopAna"  Background="{x:Null}" Width="Auto" Height="30" HorizontalAlignment="Left" BorderBrush="{x:Null}" Command="{Binding EopAnaCommand}" Margin="20,0,0,0" Visibility="{Binding Path=PrikaziKioske}">
+                        <Grid>
+                            <Grid.RowDefinitions></Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="/Ikone/archive-icon.png" Stretch="Uniform"/>
+                            <Label Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14" Margin="0,-2,0,0" Content="Eop Analitika"/>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="btnGrOrganizacije"  Background="{x:Null}" Width="Auto" Height="30" HorizontalAlignment="Left" BorderBrush="{x:Null}" Margin="20,0,0,0" Command="{Binding GrOrgCommand}" Visibility="{Binding Path=PrikaziMaterijale}">
+                        <Grid>
+                            <Grid.RowDefinitions></Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="/Ikone/archive-icon.png" Stretch="Uniform"/>
+                            <Label Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14" Margin="0,-2,0,0" Content="Gr Organizacije "/>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="btnGrKomitenti"  Background="{x:Null}" Width="Auto" Height="30" HorizontalAlignment="Left" BorderBrush="{x:Null}" Margin="20,0,0,0" Command="{Binding GrKomCommand}" Visibility="{Binding Path=PrikaziMaterijale}">
+                        <Grid>
+                            <Grid.RowDefinitions></Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="/Ikone/archive-icon.png" Stretch="Uniform"/>
+                            <Label Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14" Margin="0,-2,0,0" Content="GrKomitenti "/>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="btnOrg2"  Background="{x:Null}" Width="Auto" Height="30" HorizontalAlignment="Left" BorderBrush="{x:Null}" Margin="20,0,0,0" Command="{Binding OrgCommand}" Visibility="{Binding Path=PrikaziMaterijale}">
+                        <Grid>
+                            <Grid.RowDefinitions></Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="/Ikone/archive-icon.png" Stretch="Uniform"/>
+                            <Label Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14" Margin="0,-2,0,0" Content="Napravi Org "/>
+                        </Grid>
+                    </Button>
+
+                    <Button x:Name="btnWizard"  Background="{x:Null}" Width="Auto" Height="30" HorizontalAlignment="Left" BorderBrush="{x:Null}" Margin="20,0,0,0" Command="{Binding OpBrojCommand}" Visibility="{Binding Path=PrikaziMaterijale}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="8*"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="/Ikone/najava.png" Stretch="Uniform" Grid.ColumnSpan="2" Margin="0,0,16,0" Grid.RowSpan="2"/>
+                            <Label Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="14" Margin="0,-2,-5,0" Content="Napravi Org Wizard" HorizontalAlignment="Right" Width="41" Grid.RowSpan="2"/>
+                        </Grid>
+                    </Button>
+
+                </StackPanel>
+            </Expander>
+
+            <ContentControl x:Name="odabraniContent" Content="{Binding OdabraniVM}" Grid.Row="1" Grid.Column="1" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+        </Grid>
+    </DockPanel>
+
+</UserControl>
