@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:LutrijaWpfEF.UI"
              xmlns:vm="clr-namespace:LutrijaWpfEF.ViewModel;assembly=LutrijaWpfEF.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="900" d:DesignWidth="1800"
              
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              TextElement.FontWeight="Regular"
@@ -25,133 +25,161 @@
     <DockPanel LastChildFill="True">
         <Grid DockPanel.Dock ="Top">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="100"></ColumnDefinition>
-                <ColumnDefinition Width="100"></ColumnDefinition>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition Width="100"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="242"></ColumnDefinition>
+                <ColumnDefinition Width="266"></ColumnDefinition>
+                <ColumnDefinition Width="273"></ColumnDefinition>
+                <ColumnDefinition Width="270"></ColumnDefinition>
+                <!--<ColumnDefinition Width="200"></ColumnDefinition>-->
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="16"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition Height="10"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="15"></RowDefinition>
+                <RowDefinition Height="36*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="40*"></RowDefinition>
 
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
-                <Label VerticalAlignment="Top" Height="25" Margin="0,5,0,0" Content="Komitent"/>
-                <TextBox Margin="0,5,5,0" Width="300" Text="{Binding OdabraniKomitent.IME, UpdateSourceTrigger=PropertyChanged}">
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Height="40" Margin="208,0,266,0" Grid.RowSpan="2" Width="1068" Grid.Column="0">
+                <Label VerticalAlignment="Top" Height="35" Margin="0,5,0,0" Content="Komitent" FontSize="18" Width="85"/>
+                <TextBox Margin="0,5,5,0" Width="300" Text="{Binding OdabraniKomitent.IME, UpdateSourceTrigger=PropertyChanged}" FontSize="18">
                     <TextBox.InputBindings>
                         <MouseBinding Gesture="LeftClick" Command="{Binding KomitentiCommand}" />
                     </TextBox.InputBindings>
                 </TextBox>
-                <Label Margin="0,5,0,0" Height="25" FontWeight="SemiBold" Content="Od:"/>
-                <DatePicker Margin="0,5,5,0" Height="25" Width="100" SelectedDate="{Binding Od, UpdateSourceTrigger=PropertyChanged}" SelectedDateChanged="datOd_SelectedDateChanged" />
-                <Label Margin="0,5,0,0" Height="25" FontWeight="SemiBold" Content="Do:"/>
-                <DatePicker Margin="0,5,5,0" Height="25" Width="100" x:Name="datDo" SelectedDate="{Binding Do, UpdateSourceTrigger=PropertyChanged}" SelectedDateFormat="Short"/>
-                <Button Margin="0,5,0,0" Command="{Binding KreirajOrgCommand}">Napravi Org</Button>
+                <Label Margin="0,10,0,0" FontSize="18" FontWeight="SemiBold" Content="Od:"/>
+                <DatePicker Margin="0,10,10,0" Height="30" FontSize="18" Width="125" SelectedDate="{Binding Od, UpdateSourceTrigger=PropertyChanged}" SelectedDateChanged="datOd_SelectedDateChanged" />
+                <Label Margin="0,10,0,0" FontSize="18" FontWeight="SemiBold" Content="Do:"/>
+                <DatePicker Margin="0,8,5,0" Height="32" Width="125" FontSize="18" x:Name="datDo" SelectedDate="{Binding Do, UpdateSourceTrigger=PropertyChanged}" SelectedDateFormat="Short"/>
+                <Button Margin="0,5,12,0" FontSize="18" Command="{Binding KreirajOrgCommand}" >Izvještaj</Button>
+                <Image Source="/Ikone/print-icon.png" Width="34" Margin="0,5,0,2"/>
+                <Button Margin="4,6,0,2" FontSize="18" Content="Štampa" Click="stampa_button"/>
             </StackPanel>
 
-            <Border BorderThickness="1" BorderBrush="Black" CornerRadius="4" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7"/>
+            <Border BorderThickness="1" BorderBrush="Black" CornerRadius="4" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="7" />
 
-            <TextBlock Margin="10,0,0,0" Grid.Row="2" Grid.Column="0" FontWeight="SemiBold" FontSize="12" >OPIS</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="1" FontWeight="SemiBold" FontSize="12" >ZADUŽENJA (ULAZI)</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="2" FontWeight="SemiBold" FontSize="12" >ISPLATE (IZLAZI)</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="SemiBold" FontSize="12">ISPRAVKE</TextBlock>
+            <TextBlock  Grid.Row="2" Grid.Column="0" FontWeight="SemiBold" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" >OPIS</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" FontWeight="SemiBold" FontSize="22"  HorizontalAlignment="Center" Width="206" VerticalAlignment="Center" >ZADUŽENJA (ULAZI)</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="2" FontWeight="SemiBold" FontSize="22"  HorizontalAlignment="Center" Width="180" VerticalAlignment="Center" >ISPLATE (IZLAZI)</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="SemiBold"  FontSize="22" HorizontalAlignment="Center" Width="105" VerticalAlignment="Center">ISPRAVKE</TextBlock>
 
 
-            <Label Grid.Row="3" Grid.Column="0">Početno stanje:</Label>
-            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding PocetnaZaduzenja}"></TextBox>
-            <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding PocetnaIsplata}"></TextBox>
-            <TextBlock Margin="10,0,0,0" FontWeight="SemiBold" FontSize="14" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3">LOTO, JOKER, REDOVNI I VANREDNI BINGO, KLADIONICA - ON LINE IGRE</TextBlock>
-            <Label Grid.Row="5" Grid.Column="0">On line:</Label>
-            <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding UplataOsnovneIgre}"/>
-            <Label Grid.Row="6" Grid.Column="0">Kladionica:</Label>
-            <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding UplataKladionica}"/>
-            <Label Grid.Row="7" Grid.Column="0">Automati:</Label>
-            <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding UplataAutomati}"/>
-            <Label Grid.Row="8" Grid.Column="0">Bilijari:</Label>
-            <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding UplataBilijari}"/>
-            <Label Grid.Row="9" Grid.Column="0">Ruleti:</Label>
-            <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding UplataRuleti}"/>
-            <Label Grid.Row="10" Grid.Column="0">Srećke:</Label>
-            <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding UplataSreckeSve}"/>
-            <Label Grid.Row="11" Grid.Column="0">Porez:</Label>
-            <TextBox Grid.Row="11" Grid.Column="1" Text="{Binding Porez}"/>
-            <Label Grid.Row="12" Grid.Column="0">Ostala zaduženja:</Label>
-            <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding OstalaZaduzenja}"/>
-            <Label Grid.Row="13" Grid.Column="0">Polog pazara:</Label>
-            <TextBox Grid.Row="13" Grid.Column="2" Text="{Binding PologPazara}"/>
-            <TextBlock Margin="10,0,0,0" FontWeight="SemiBold" FontSize="14" Grid.Row="14" Grid.Column="0">ISPLAĆENI MATERIJAL</TextBlock>
-            <Label Grid.Row="15" Grid.Column="0">On Line igre i srećke:</Label>
-            <TextBox Grid.Row="15" Grid.Column="2" Text="{Binding IsplataOsnovneIgreSrecke}"/>
-            <Label Grid.Row="16" Grid.Column="0">On Line kladionica:</Label>
-            <TextBox Grid.Row="16" Grid.Column="2" Text="{Binding IsplataKladionica}"/>
-            <Label Grid.Row="17" Grid.Column="0">Web isplata:</Label>
-            <TextBox Grid.Row="17" Grid.Column="2" Text="{Binding WebIsplata}"/>
-            <Label Grid.Row="18" Grid.Column="0">Ukupan promet:</Label>
-            <TextBox Grid.Row="18" Grid.Column="1" Text="{Binding UkupnaUplata}"></TextBox>
-            <TextBox Grid.Row="18" Grid.Column="2" Text="{Binding UkupnaIsplata}"></TextBox>
-            <Label Grid.Row="19" Grid.Column="0">Saldo:</Label>
-            <TextBox Grid.Row="19" Grid.Column="1" Text="{Binding Saldo}"></TextBox>
-            <TextBlock Margin="10,0,0,0" FontWeight="SemiBold" FontSize="14" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="3">PREGLED PO IGRAMA</TextBlock>
-            <Label Grid.Row="4" Grid.Column="4">Superloto:</Label>
+            <Label Grid.Row="3" Grid.Column="0" FontSize="18">Početno stanje:</Label>
+            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding PocetnaZaduzenja, StringFormat={}{0:N2}}" FontSize="18"></TextBox>
+            <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding PocetnaIsplata, StringFormat={}{0:N2}}" FontSize="18"></TextBox>
+            <TextBlock Margin="10,0,0,0" FontWeight="SemiBold" FontSize="22" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3">LOTO, JOKER, REDOVNI I VANREDNI BINGO, KLADIONICA - ON LINE IGRE</TextBlock>
+            <Label Grid.Row="5" Grid.Column="0" FontSize="18">On line:</Label>
+            <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding UplataOsnovneIgre, StringFormat={}{0:N2}}"  FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="6" Grid.Column="0" FontSize="18">Kladionica:</Label>
+            <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding UplataKladionica, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="7" Grid.Column="0" FontSize="18">Automati:</Label>
+            <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding UplataAutomati, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="8" Grid.Column="0" FontSize="18">Bilijari:</Label>
+            <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding UplataBilijari, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="9" Grid.Column="0" FontSize="18">Ruleti:</Label>
+            <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding UplataRuleti, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="10" Grid.Column="0" FontSize="18">Srećke:</Label>
+            <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding UplataSreckeSve, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="11" Grid.Column="0" FontSize="18">Porez:</Label>
+            <TextBox Grid.Row="11" Grid.Column="1" Text="{Binding Porez, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="12" Grid.Column="0" FontSize="18">Ostala zaduženja:</Label>
+            <TextBox Grid.Row="12" Grid.Column="1" Text="{Binding OstalaZaduzenja, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="13" Grid.Column="0" FontSize="18">Polog pazara:</Label>
+            <TextBox Grid.Row="13" Grid.Column="2" Text="{Binding PologPazara, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="14" Grid.Column="0" FontSize="18">Kartična zaduženja:</Label>
+            <TextBox Grid.Row="14" Grid.Column="1" Text="" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <TextBlock Margin="10,0,0,0" FontWeight="SemiBold" FontSize="22" Grid.Row="15" Grid.Column="0">ISPLAĆENI MATERIJAL</TextBlock>
+            <Label Grid.Row="16" Grid.Column="0" FontSize="18">On Line igre i srećke:</Label>
+            <TextBox Grid.Row="16" Grid.Column="2" Text="{Binding IsplataOsnovneIgreSrecke, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="17" Grid.Column="0" FontSize="18">On Line kladionica:</Label>
+            <TextBox Grid.Row="17" Grid.Column="2" Text="{Binding IsplataKladionica, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="18" Grid.Column="0" FontSize="18">Web isplata:</Label>
+            <TextBox Grid.Row="18" Grid.Column="2" Text="{Binding WebIsplata, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"/>
+            <Label Grid.Row="19" Grid.Column="0" FontSize="18">Ukupan promet:</Label>
+            <TextBox Grid.Row="19" Grid.Column="1" Text="{Binding UkupnaUplata,StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"></TextBox>
+            <TextBox Grid.Row="19" Grid.Column="2" Text="{Binding UkupnaIsplata, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"></TextBox>
+            <Label Grid.Row="20" Grid.Column="0" FontSize="18">Saldo:</Label>
+            <TextBox Grid.Row="20" Grid.Column="1" Text="{Binding Saldo, StringFormat={}{0:N2}}" FontSize="18" TextAlignment="Right" VerticalAlignment="Bottom"></TextBox>
+            <TextBlock  FontWeight="SemiBold" FontSize="22" Grid.Row="2" VerticalAlignment="Center" Grid.Column="4" HorizontalAlignment="Center">PREGLED PO IGRAMA</TextBlock>
+            <Label Grid.Row="4" FontSize="18" Grid.Column="4" FontWeight="Bold" VerticalAlignment="Center">Superloto:</Label>
 
-            <ListView Grid.Row="5" Grid.RowSpan="6" Grid.Column="4" Grid.ColumnSpan="2"
+            <ListView Grid.Row="5" Grid.RowSpan="8" Grid.Column="4"
                       ScrollViewer.VerticalScrollBarVisibility="Auto" 
                       x:Name="lstIznosiPoIgri"
 			          ItemsSource="{Binding Path=IsplataPoIgri}" 
-                      FontWeight="Bold"               
-                      HorizontalContentAlignment="Stretch">
+                      FontWeight="Bold"         
+                      FontSize="18"
+                      HorizontalContentAlignment="Stretch" Grid.ColumnSpan="2">
                 <ListView.View>
                     <GridView>
                         <GridView.Columns>
-                            <GridViewColumn Header="Igra" DisplayMemberBinding="{Binding Path=LIS_IGRA}" Width="150"/>
-                            <GridViewColumn Header="Iznos" DisplayMemberBinding="{Binding Path=LIS_IZNOS}" Width="100"/>
+                            <GridViewColumn Header="Igra" DisplayMemberBinding="{Binding Path=LIS_IGRA}" Width="200"/>
+                            <GridViewColumn Header="Iznos" DisplayMemberBinding="{Binding Path=LIS_IZNOS}" Width="200"/>
                         </GridView.Columns>
                     </GridView>
                 </ListView.View>
 
             </ListView>
 
-            <ListView Grid.Row="12" Grid.RowSpan="6" Grid.Column="4" Grid.ColumnSpan="2"
+            <ListView Grid.Row="14" Grid.RowSpan="8" Grid.Column="4"
                       ScrollViewer.VerticalScrollBarVisibility="Auto" 
                       x:Name="lstIIznosiPoSrecki"
 			          ItemsSource="{Binding Path=IsplataPoSrecki}" 
-                      FontWeight="Bold"               
-                      HorizontalContentAlignment="Stretch">
+                      FontWeight="Bold" 
+                      FontSize="18"
+                      HorizontalContentAlignment="Stretch" Grid.ColumnSpan="2">
                 <ListView.View>
                     <GridView>
                         <GridView.Columns>
-                            <GridViewColumn Header="Srecka" DisplayMemberBinding="{Binding Path=LIS_NAZ_SRE}" Width="150"/>
-                            <GridViewColumn Header="Iznos" DisplayMemberBinding="{Binding Path=LIS_IZNOS}" Width="100"/>
+                            <GridViewColumn Header="Srecka" DisplayMemberBinding="{Binding Path=LIS_NAZ_SRE}" Width="200"/>
+                            <GridViewColumn Header="Iznos" DisplayMemberBinding="{Binding Path=LIS_IZNOS}" Width="200"/>
                         </GridView.Columns>
                     </GridView>
                 </ListView.View>
 
             </ListView>
+            <GridSplitter Grid.Column="2" HorizontalAlignment="Left" Height="817" Grid.Row="3" Grid.RowSpan="20" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5">
+                <GridSplitter.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </GridSplitter.RenderTransform>
+            </GridSplitter>
+            <GridSplitter Grid.Column="3"  HorizontalAlignment="Left" Height="900" Grid.RowSpan="23" VerticalAlignment="Bottom" Width="1"/>
+            <GridSplitter Grid.Column="4" HorizontalAlignment="Left" Height="900" Grid.RowSpan="23" VerticalAlignment="Bottom" Width="1"/>
+            <GridSplitter Grid.Column="4" HorizontalAlignment="Left" Height="737" Margin="198,0,0,0" Grid.Row="5" Grid.RowSpan="18" VerticalAlignment="Top" Width="1"/>
+            <GridSplitter Grid.Column="2" HorizontalAlignment="Left" Height="41" Grid.Row="3" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5">
+                <GridSplitter.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </GridSplitter.RenderTransform>
+            </GridSplitter>
+
         </Grid>
     </DockPanel>
 </UserControl>

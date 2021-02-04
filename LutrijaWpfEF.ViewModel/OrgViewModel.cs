@@ -55,7 +55,7 @@ namespace LutrijaWpfEF.ViewModel
         private decimal? _webIsplata;
         private decimal? _nazivIgre;
         private decimal? _iznosIgre;
-        private DateTime _od =  DateTime.Now;
+        private DateTime _od =  DateTime.Now.AddDays(-14);
         private DateTime _do = DateTime.Now;
         private Org _org;
         private decimal? _isplataSuperloto;

@@ -13,14 +13,14 @@
     <DockPanel LastChildFill="True">
         <Grid DockPanel.Dock="Top">
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
+                <RowDefinition Height="45"/>
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" Grid.Column="1" Visibility="Visible">
-                <Label VerticalAlignment="Center">Traži:</Label>
-                <TextBox x:Name="txtSearchText" Grid.Row="1" Grid.Column="1" Height="32" Padding="3" Width="200" HorizontalAlignment="Left" Margin="3" CharacterCasing="Upper" Text="{Binding Pretraga, UpdateSourceTrigger=PropertyChanged}">
-                </TextBox>
+                <Label VerticalAlignment="Center" FontSize="18" >Traži:</Label>
+                <TextBox x:Name="txtSearchText" Grid.Row="1" Grid.Column="1" Padding="3" Width="200" HorizontalAlignment="Left" Margin="3,4,3,0" CharacterCasing="Upper" Text="{Binding Pretraga, UpdateSourceTrigger=PropertyChanged}" FontSize="18"></TextBox>
+               
             </StackPanel>
             <ListView ScrollViewer.VerticalScrollBarVisibility="Auto" 
                       x:Name="lstIVrsteIncidenata"
@@ -52,9 +52,9 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
-                   
-                    <Button x:Name="btnPrihvati"  Content="Odaberi" Width="100" Margin="5,5,0,5" HorizontalAlignment="Left" Command="{Binding OdaberiCommand}" Visibility="{Binding Path=VidljivoOdabirVrsteIncidenta}"/>
-                    <Button x:Name="btnOdustani" Command="{Binding OpBrojCommand}"  Content="Odustani" Width="100" Margin="5,5,0,5" Grid.Column="1" HorizontalAlignment="Left"  Visibility="{Binding Path=VidljivoOdabirVrsteIncidenta}"/>
+
+                    <Button x:Name="btnPrihvati"  Content="Odaberi" FontSize="18" Width="100" Margin="5,5,0,5" HorizontalAlignment="Left" Command="{Binding OdaberiCommand}" Visibility="{Binding Path=VidljivoOdabirVrsteIncidenta}"/>
+                    <Button x:Name="btnOdustani" Command="{Binding OpBrojCommand}" FontSize="18" Content="Odustani" Width="100" Margin="5,5,0,5" Grid.Column="1" HorizontalAlignment="Left"  Visibility="{Binding Path=VidljivoOdabirVrsteIncidenta}"/>
                 </StackPanel>
             </Grid>
         </Grid>

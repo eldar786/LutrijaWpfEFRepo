@@ -61,5 +61,11 @@ namespace LutrijaWpfEF.UI
         {
 
         }
+
+        private void stampa_button(object sender, RoutedEventArgs e)
+        {
+            //PrintOrg print = new PrintOrg();
+            //print.Stampa();
+        }
     }
 }
